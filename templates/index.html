@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <h1>Chose your training</h1>
+    <ul>
+        {% for wod in data %}
+            <li><a href="/data/{{ wod }}">{{ wod }}</a></li>
+        {% endfor %}
+    </ul>
+
+{% endblock %}

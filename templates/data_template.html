@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <div class="btn">
+        <a class="go-back" href="/">Back</a>
+    </div>
+
+    <div class="card">
+        {{ content | safe }}
+    </div>
+
+{% endblock %}
