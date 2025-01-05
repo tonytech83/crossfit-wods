@@ -2,10 +2,13 @@
 {% block content %}
 
     <h1>Chose your training</h1>
-    <ul>
+    <div class="wods-list">
         {% for wod in data %}
-            <li><a href="/data/{{ wod }}">{{ wod }}</a></li>
+            <div class="wod-item">
+                <a href="/data/{{ wod.filename }}">{{ wod.formatted_date }}</a>
+            </div>
         {% endfor %}
-    </ul>
+    </div>
+
 
 {% endblock %}

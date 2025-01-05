@@ -1,43 +1,42 @@
+@import "colors.css";
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
 body {
+    font-family: "Montserrat", sans-serif;
     height: 100vh; /* Ensures the body takes the full viewport height */
-    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #2E3440;
+    background-color: var(--black-color);
 }
 
 h1 {
     text-align: center;
-    color: #D8DEE9;
+    color: var(--white-color);
 }
 
-ul {
-    width: 50%;
-    margin: auto;
-    list-style-type: none;
-    padding: 0;
+.wods-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 5px;
+    margin: 0 10px;
 }
 
-li {
+.wod-item {
     display: flex;
     justify-content: center;
-    margin: 10px 0;
-    padding: 10px;
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    transition: box-shadow 0.3s ease;
-}
-
-li:hover {
-    background-color: #f7931a;
-    color: #007BFF;
     align-items: center;
+    width: 160px;
+    height: 160px;
+    border: 2px solid var(--orange-color);
+    border-radius: 8px;
 }
 
-a {
+.wod-item a {
     text-decoration: none;
-    color: #2E3440;
+    color: var(--white-color);
 }
 
 .btn {
@@ -53,13 +52,15 @@ a {
     flex: 1;
     text-align: center;
     padding: 10px 0;
-    background-color: #BF616A;
-    color: white;
+    background-color: var(--red-color);
+    color: var(--black-color);
+    font-weight: bold;
+    text-decoration: none;
 }
 
 .card {
     padding: 10px;
-    color: #D8DEE9;
+    color: var(--white-color);
     flex: 1;
     justify-content: center; /* Centers horizontally */
     align-items: center;
