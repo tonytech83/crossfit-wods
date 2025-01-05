@@ -1,6 +1,6 @@
 # Crossfit WODs Web App
 
-This is a Flask web application that lists Crossfit WOD (Workout of the Day) files from a `data` directory. Each file is viewable via dynamically generated links.
+This is a Flask web application that lists Crossfit WOD (Workout of the Day) files from a `data` directory (web scraped from https://rxinfinitybox.com/). Each file is viewable via dynamically generated links.
 
 ## Features
 - Displays a list of HTML files from the `data` directory.
