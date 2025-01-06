@@ -11,19 +11,26 @@ def format_date_from_filename(filename):
 
 def get_data_dir():
     """
-    Create list of dictionaries with file name and from file name which is date formated dare
-    :return: list of dictionaries
+    Create a list of dictionaries with file name and formatted date from the file name.
+    Reassigns indices after sorting by date.
+    :return: List of dictionaries sorted by date.
     """
+    # Extract filenames and dates
     data_files = [
-        {"idx": idx,"filename": file, "formatted_date": format_date_from_filename(file)}
-        for idx,file in enumerate( os.listdir(data_dir))
+        {"filename": file, "formatted_date": format_date_from_filename(file)}
+        for file in os.listdir(data_dir)
         if file.endswith('.html')
     ]
 
     # Sort by date derived from the filename
     data_files.sort(key=lambda x: datetime.strptime(x["filename"].split('.')[0], "%Y-%m-%d"))
 
+    # Reassign idx after sorting
+    for idx, item in enumerate(data_files):
+        item["idx"] = idx
+
     return data_files
+
 
 def prepare_file_content(filename):
     file_path = os.path.join(data_dir, filename)
