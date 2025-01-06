@@ -20,6 +20,9 @@ def get_data_dir():
         if file.endswith('.html')
     ]
 
+    # Sort by date derived from the filename
+    data_files.sort(key=lambda x: datetime.strptime(x["filename"].split('.')[0], "%Y-%m-%d"))
+
     return data_files
 
 def prepare_file_content(filename):
