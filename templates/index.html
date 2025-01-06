@@ -5,6 +5,7 @@
     <div class="wods-list">
         {% for wod in data %}
             <div class="wod-item">
+                <p>{{ wod.idx }}</p>
                 <a href="/data/{{ wod.filename }}">{{ wod.formatted_date }}</a>
             </div>
         {% endfor %}

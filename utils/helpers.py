@@ -15,8 +15,8 @@ def get_data_dir():
     :return: list of dictionaries
     """
     data_files = [
-        {"filename": file, "formatted_date": format_date_from_filename(file)}
-        for file in os.listdir(data_dir)
+        {"idx": idx,"filename": file, "formatted_date": format_date_from_filename(file)}
+        for idx,file in enumerate( os.listdir(data_dir))
         if file.endswith('.html')
     ]
 
