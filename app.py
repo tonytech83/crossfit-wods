@@ -11,22 +11,22 @@ app = Flask(
 )
 
 
-@app.route('/')
+@app.route("/")
 def index():
     data = get_data_dir()
 
-    return render_template('index.html', data=data)
+    return render_template("index.html", data=data)
 
 
-@app.route('/data/<filename>')
+@app.route("/data/<filename>")
 def serve_data(filename):
     # Load the content of the requested file
     content = prepare_file_content(filename)
 
-    return render_template('data_template.html', filename=filename, content=content)
+    return render_template("data_template.html", filename=filename, content=content)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
     print(f"Starting server on port {port}")
     app.run(host="0.0.0.0", port=port)
