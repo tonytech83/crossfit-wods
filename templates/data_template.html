@@ -2,7 +2,23 @@
 
 <div class="card">
   <div class="btn">
-    <a class="go-back" href="/">Back</a>
+    {% if prev_file %}
+    <a class="nav-btn" href="{{ url_for('serve_data', filename=prev_file) }}"
+      >Prev</a
+    >
+    {% else %}
+    <span class="nav-btn disabled">Prev</span>
+    {% endif %}
+
+    <a class="home-btn" href="{{ url_for('index') }}">Home</a>
+
+    {% if next_file %}
+    <a class="nav-btn" href="{{ url_for('serve_data', filename=next_file) }}"
+      >Next</a
+    >
+    {% else %}
+    <span class="nav-btn disabled">Next</span>
+    {% endif %}
   </div>
 
   <div class="content">{{ content | safe }}</div>

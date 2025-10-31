@@ -1,15 +1,15 @@
-{% extends "base.html" %}
-{% block content %}
+{% extends "base.html" %} {% block content %}
 
-    <h1>Chose your training</h1>
-    <div class="wods-list">
-        {% for wod in data %}
-            <div class="wod-item">
-                <p>{{ wod.idx }}</p>
-                <a href="/data/{{ wod.filename }}">{{ wod.formatted_date }}</a>
-            </div>
-        {% endfor %}
+<h1>Chose your training</h1>
+<div class="wods-list">
+  {% for wod in data %}
+  <a href="/data/{{ wod.filename }}">
+    <div class="wod-item">
+      <p>{{ wod.idx }}</p>
+      <p>{{ wod.formatted_date }}</p>
     </div>
-
+  </a>
+  {% endfor %}
+</div>
 
 {% endblock %}

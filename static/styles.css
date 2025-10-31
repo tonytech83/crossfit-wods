@@ -36,7 +36,7 @@ h1 {
 }
 
 .wod-item p {
-  font-size: 1.2em;
+  font-size: 0.9em;
   font-weight: bold;
   margin: 8px;
   color: var(--white-color);
@@ -50,20 +50,35 @@ h1 {
 
 .btn {
   display: flex;
-  justify-content: center;
+  justify-content: space-between; /* three buttons across */
   align-items: center;
+  gap: 10px;
   margin: 10px;
   padding: 10px;
 }
 
-.go-back {
+.home-btn,
+.nav-btn {
   flex: 1;
   text-align: center;
   padding: 10px 0;
-  background-color: var(--red-color);
   color: var(--black-color);
   font-weight: bold;
   text-decoration: none;
+  border-radius: 4px;
+}
+
+.home-btn {
+  background-color: var(--blue-color);
+}
+
+.nav-btn {
+  background-color: var(--green-color);
+}
+
+.nav-btn.disabled {
+  opacity: 0.5;
+  pointer-events: none;
 }
 
 .card {
