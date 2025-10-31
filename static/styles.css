@@ -86,6 +86,7 @@ h1 {
   width: min(800px, 92vw);
   margin: 32px auto;
   padding: 16px 20px;
-  border: 1px solid var(--white-color);
+  border: 2px solid var(--white-color);
+  border-radius: 8px;
   color: var(--white-color);
 }
